@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.email         = ['peter.karman@gsa.gov']
   s.summary       = 'Ruby client for the C2 application'
   s.description   = 'Ruby client for the C2 application'
-  s.homepage      = 'https://github.com/18F/c2-api-client'
+  s.homepage      = 'https://github.com/18F/c2-api-client-ruby'
   s.license       = 'CC0'
 
   s.add_runtime_dependency "faraday"
