@@ -8,9 +8,22 @@ c2_client = C2::Client.new(
   debug: ENV.fetch('C2_DEBUG', false)
 )
 
-resp = c2_client.get('proposals/12345')
+resp = c2_client.post 'proposals', {
+  gsa18f_procurement: {
+    product_name_and_description: "some stuff",
+    cost_per_unit: 123.00,
+    quantity: 1,
+    justification: "because because because",
+    link_to_product: "18f.gov",
+    purchase_type: "Software"
+  }
+}
+
 proposal = resp.body
-puts "proposal 12345 has title #{proposal[:title]}"
+puts "new proposal has id #{proposal.id}"
+
+resp = c2_client.get "proposals/#{proposal.id}"
+puts "proposal #{proposal.id} has name #{resp.body.product_name_and_description}"
 ```
 
 ## Set up your C2 account with OAuth credentials
