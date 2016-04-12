@@ -1,6 +1,17 @@
 # C2 API Client for Ruby
 
-[![Build Status](https://travis-ci.org/18F/c2-api-client-ruby.svg?branch=master)](https://travis-ci.org/18F/c2-api-client-ruby)
+```ruby
+c2_client = C2::Client.new(
+  oauth_key: ENV.fetch('OAUTH_KEY'),
+  oauth_secret: ENV.fetch('OAUTH_SECRET'),
+  host: ENV.fetch('C2_HOST', 'https://cap.18f.gov'),
+  debug: ENV.fetch('C2_DEBUG', false)
+)
+
+resp = c2_client.get('proposals/12345')
+proposal = resp.body
+puts "proposal 12345 has title #{proposal[:title]}"
+```
 
 ## Public domain
 
