@@ -13,6 +13,18 @@ proposal = resp.body
 puts "proposal 12345 has title #{proposal[:title]}"
 ```
 
+## Set up your C2 account with OAuth credentials
+
+Visit the OAuth applications manager URL for the site you want to use. In production,
+that would be https://cap.18f.gov/oauth/applications -- the endpoint is the same
+regardless of the environment or hostname.
+
+Create a new application.
+
+Authorize the new application (click the `Authorize` button).
+
+Use the key/secret pair generated for your client configuration. 
+
 ## Public domain
 
 This project is in the worldwide [public domain](LICENSE.md). As stated in [CONTRIBUTING](CONTRIBUTING.md):
