@@ -1,3 +1,4 @@
+require 'c2/version'
 require 'json'
 require 'faraday_middleware'
 require 'oauth2'
@@ -5,12 +6,10 @@ require 'uri'
 
 module C2
   class Client
-    VERSION = '1.0.0'
-
     attr_accessor :host, :debug, :agent, :user_agent, :cookies, :endpoint
 
     def version
-      VERSION
+      ::C2::VERSION
     end
 
     def initialize(args)

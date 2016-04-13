@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'c2'
+require 'c2/version'
 
 Gem::Specification.new do |s|
   s.name          = 'c2'
-  s.version       = C2::Client::VERSION
+  s.version       = C2::VERSION
   s.authors       = ['Peter Karman']
   s.email         = ['peter.karman@gsa.gov']
   s.summary       = 'Ruby client for the C2 application'
