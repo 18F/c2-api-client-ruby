@@ -1,5 +1,7 @@
 test:
   build: .
-  volumes:
-    - .:/usr/src/app
   command: bundle exec rake spec
+
+console:
+  build: .
+  command: bundle exec pry --gem
