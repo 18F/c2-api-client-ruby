@@ -36,7 +36,27 @@ Create a new application.
 
 Authorize the new application (click the `Authorize` button).
 
-Use the key/secret pair generated for your client configuration. 
+Use the key/secret pair generated for your client configuration.
+
+## Development
+
+Clone this repo and `cd` into it.
+
+### Docker/docker-compose setup
+
+Make sure you have Docker and docker-compose installed.
+
+To run tests:
+
+```
+docker-compose run test
+```
+
+To open a `pry` console:
+
+```
+docker-compose run console
+```
 
 ## Public domain
 
